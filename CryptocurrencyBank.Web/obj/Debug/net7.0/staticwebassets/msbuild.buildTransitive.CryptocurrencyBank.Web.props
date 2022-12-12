@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\CryptocurrencyBank.Web.props" />
+</Project>

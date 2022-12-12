@@ -1,0 +1,45 @@
+﻿@model CryptocurrencyBank.Web.Models.MoneyTransferModels.MoneyTransferCreateCommand
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MoneyTransferCreateCommand</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="From" class="control-label">From</label>
+                <input name="From" asp-for="From" class="form-control" />
+                <span asp-validation-for="From" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="To" class="control-label">To</label>
+                <input name="To" asp-for="To" class="form-control" />
+                <span asp-validation-for="To" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HowMany" class="control-label">How many</label>
+                <input name="HowMany" asp-for="HowMany" class="form-control" />
+                <span asp-validation-for="HowMany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransferType" class="control-label">Transfer type</label>
+                <input name="TransferType" asp-for="TransferType" class="form-control" />
+                <span asp-validation-for="TransferType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="Create" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
